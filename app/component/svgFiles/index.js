@@ -6,4 +6,3 @@ export { default as HomeImage } from "./HomeImage";
 export { default as Icon } from "./Icon";
 export { default as Iphone } from "./Iphone";
 export { default as Success } from "./Success";
-export { default as WhyImage } from "./WhyImage";

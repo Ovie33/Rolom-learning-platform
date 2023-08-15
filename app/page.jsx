@@ -1,19 +1,15 @@
 "use client";
 import Button from "./component/button";
-import { easeIn, easeOut, motion } from "framer-motion";
-import {
-  Bannerimage,
-  WhyImage,
-  Contact,
-  Iphone,
-  Cloud,
-} from "./component/svgFiles";
+import { delay, easeIn, easeOut, motion } from "framer-motion";
+import { Bannerimage, Contact, Iphone, Cloud } from "./component/svgFiles";
 import Typography from "./component/typography";
 
 const Homepage = () => {
   return (
     <div className="  bg-secondary text-white overflow-hidden">
-      {/* landing setion */}
+      {/* ----------------- */}
+      {/* Hero section */}
+      {/* ----------------- */}
       <section className="py-16 px-24 flex items-center">
         <div className=" w-2/3">
           <motion.div
@@ -47,7 +43,6 @@ const Homepage = () => {
             </div>
           </motion.div>
         </div>
-        {/* Home image */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,63 +52,109 @@ const Homepage = () => {
             <Bannerimage />
           </div>
         </motion.div>
-
-        {/* end Home image */}
       </section>
-      {/* end of landing section */}
-      {/* about setion */}
+      {/* ----------------- */}
+      {/* About section */}
+      {/* ----------------- */}
       <section className="py-16 px-24">
         <div className="flex flex-col justify-center items-center">
-          <div className="flex justify-center w-full mb-8">
+          <div className="flex justify-center w-full mb-4">
             <div>
-              <Typography variant="h2">About Us</Typography>
+              <Typography variant="h2">Who We Are</Typography>
               <span className="block border-b-8 w-1/2 rounded-lg border-accent"></span>
             </div>
           </div>
           <div className=" w-[900px] text-center">
             <Typography variant="body">
-              Rolom Tech is a leading institution specializing in
-              technology-focused education. Our mission is to empower
-              individuals with the skills and knowledge necessary to thrive in
-              the rapidly evolving tech landscape. With a focus on practical
-              learning, industry connections, and fostering a collaborative
-              community, Rolom Tech is the perfect place to kickstart your tech
-              career.
+              Rolom Tech stands as a dynamic and thriving technology enterprise,
+              leaving an indelible mark since our establishment. Beyond the mere
+              creation of code, we are dedicated to sculpting digital marvels
+              that have a meaningful impact and bring about positive change.
             </Typography>
           </div>
         </div>
       </section>
-      {/* end of about section */}
-      {/* start of why choose us section */}
+      {/* ----------------- */}
+      {/* why choose us section */}
+      {/* ----------------- */}
       <section className="py-16 px-24">
-        <div className="flex w-full justify-between items-center">
-          <div>
-            <WhyImage />
+        <div className="flex flex-col space-y-10">
+          <div className="relative">
+            <motion.img
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.2, type: "tween" }}
+              src="why1.png"
+              alt="image"
+              height="450px"
+              width="450px"
+            />
+
+            <motion.div
+              initial={{ x: 500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.2, type: "tween" }}
+              className="flex flex-col text-center w-[45%] space-x-2 space-y-3 absolute top-[90px] left-[400px] bg-secondary p-4 rounded-lg shadow-lg shadow-[#192165]"
+            >
+              <Typography variant="h3">OUR APPROACH</Typography>
+              <Typography variant="body">
+                At Rolom Tech, we believe technology should be a force for good.
+                Our team of dedicated professionals collaborates seamlessly to
+                turn your ideas into transformative solutions. We're not just
+                here to meet your expectations; we're here to exceed them.
+              </Typography>
+            </motion.div>
           </div>
-          <div className="w-[40%]">
-            <div className="flex mb-8">
-              <div>
-                <Typography variant="h2">Why choose Us</Typography>
-                <span className="block border-b-8 w-1/4 rounded-lg border-accent"></span>
-              </div>
-            </div>
-            <Typography variant="body">
-              At Rolomtech, we offer an exceptional tech education experience.
-              With industry-relevant curriculum, expert faculty, and a focus on
-              practical learning, you'll acquire the latest skills and hands-on
-              experience needed to excel in the tech industry. Our career
-              support and strong alumni network ensure your success beyond
-              graduation. At Rolom Tech, we offer an exceptional tech education
-              experience. With industry-relevant curriculum, expert faculty, and
-              a focus on practical learning, you'll acquire the latest skills
-              and hands-on experience needed to excel in the tech industry. Our
-              career support and strong alumni network ensure your success
-              beyond graduation. Choose Rolom Tech and unleash your potential in
-              the dynamic world of technology.
-            </Typography>
-            <div className="mt-8">
-              <Button variant="accentOutline">Enroll now</Button>
-            </div>
+          <div className="relative">
+            <motion.img
+              initial={{ x: 500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1.5, type: "tween" }}
+              src="why2.png"
+              alt="image"
+              height="450px"
+              width="450px"
+              className=" float-right"
+            />
+            <motion.div
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.2, type: "tween" }}
+              className="flex flex-col text-center w-[45%] space-x-2 space-y-3 absolute top-[75px] right-[400px] bg-secondary p-4 rounded-lg shadow-lg shadow-[#192165]"
+            >
+              <Typography variant="h3">Learning and Leading</Typography>
+              <Typography variant="body">
+                We may be young, but our commitment to education is unwavering.
+                Through hands-on workshops and personalized mentorship, we're
+                nurturing the next generation of tech leaders. Join us and be
+                part of a community that values knowledge and innovation.
+              </Typography>
+            </motion.div>
+          </div>
+          <div className="relative">
+            <motion.img
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.2, type: "tween" }}
+              src="why3.png"
+              alt="image"
+              height="450px"
+              width="450px"
+            />
+            <motion.div
+              initial={{ x: 500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.2, type: "tween" }}
+              className="flex flex-col text-center w-[45%] space-x-2 space-y-3 absolute top-[90px] left-[400px] bg-secondary p-4 rounded-lg shadow-lg shadow-[#192165]"
+            >
+              <Typography variant="h3">Join Our Journey</Typography>
+              <Typography variant="body">
+                We're a family of tech enthusiasts who are passionate about
+                making a positive impact. As we pave the way for a future driven
+                by technology, we invite you to embark on this exciting journey
+                with us.
+              </Typography>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -9,9 +9,8 @@ const Navbar = () => {
     <div>
       <div className="bg-secondary  text-white text-sm items-center">
         <nav className="flex w-full  px-24 py-5 justify-between items-center">
-          <Link href="/" className="w-[185px] flex space-x-3">
+          <Link href="/" className="w-fit flex space-x-3">
             <Icon />
-            <Typography variant="h2">Rolom</Typography>
           </Link>
           <div className="flex items-center">
             <NavLinks children="Home" href="/" />
@@ -20,10 +19,12 @@ const Navbar = () => {
             <NavLinks children="Contact" href="contact" />
           </div>
           <div className="flex items-center">
-            <Link className="mx-8" href="#">
+            <Link className="mx-8" href="login">
               Login
             </Link>
-            <Button variant="primary">Join Us</Button>
+            <Link href="admission">
+              <Button variant="primary">Join Us</Button>
+            </Link>
           </div>
         </nav>
       </div>

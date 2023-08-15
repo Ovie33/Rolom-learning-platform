@@ -65,7 +65,7 @@ export default function Admission() {
       {/* end of steps */}
       {/* form */}
       <section className="py-12 px-24">
-        <form className=" ">
+        <form action="#">
           {/* personal information */}
           <div className="mb-12">
             <div className="text-accent mb-6">
@@ -178,9 +178,7 @@ export default function Admission() {
                 </Typography>
               </div>
             </div>
-            <Link href="/admission/success">
-              <Button variant="secondary">Proceed</Button>
-            </Link>
+            <Button variant="secondary">Proceed</Button>
           </div>
           {/* end of agreement */}
         </form>
